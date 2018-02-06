@@ -15,7 +15,7 @@ if [[ $COMMAND ]]; then
     for TARGET in $TARGETS; do
         echo "Building example with" $TARGET "using" $COMMAND
         cd $TRAVIS_BUILD_DIR/example
-        haxelib run $COMMAND build $TARGET || exit 1
+            haxelib run $COMMAND build $TARGET || exit 1
         done
     done
 fi
