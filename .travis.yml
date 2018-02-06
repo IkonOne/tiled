@@ -24,7 +24,7 @@ install:
   - if [[ $OPENFL ]]; then yes | haxelib install openfl $OPENFL > log.txt || cat log.txt; fi
   - if [[ $NME ]]; then yes | haxelib install nme $NME > log.txt || cat log.txt; fi
   - yes | haxelib git HaxePunk https://github.com/HaxePunk/HaxePunk.git
-  - haxelib dev HaxePunk $TRAVIS_BUILD_DIR
+  - haxelib dev HaxePunkTmx $TRAVIS_BUILD_DIR
   - haxelib list
 
 before_script:
