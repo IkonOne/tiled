@@ -26,6 +26,9 @@ install:
   - yes | haxelib git HaxePunk https://github.com/HaxePunk/HaxePunk.git
   - haxelib list
 
+before_script:
+  - chmod +x ./travis-build.sh
+
 script:
   - export HXCPP_COMPILE_CACHE=~/.hxcpp_cache
   - ./travis-build.sh
