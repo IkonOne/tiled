@@ -23,7 +23,8 @@ install:
   - if [[ $LIME ]]; then yes | haxelib install lime $LIME > log.txt || cat log.txt; fi
   - if [[ $OPENFL ]]; then yes | haxelib install openfl $OPENFL > log.txt || cat log.txt; fi
   - if [[ $NME ]]; then yes | haxelib install nme $NME > log.txt || cat log.txt; fi
-  - yes | haxelib git HaxePunk https://github.com/HaxePunk/HaxePunk.git > log.txt || cat log.txt
+  - git clone https://github.com/HaxePunk/HaxePunk.git > log.txt || cat log.txt
+  - haxelib dev HaxePunk ./HaxePunk > log.txt || cat log.txt
   - haxelib dev HaxePunkTmx $TRAVIS_BUILD_DIR > log.txt || cat log.txt
   - haxelib list
 
