@@ -26,6 +26,7 @@ install:
   - git clone https://github.com/HaxePunk/HaxePunk.git > log.txt || cat log.txt
   - haxelib dev HaxePunk ./HaxePunk > log.txt || cat log.txt
   - haxelib dev HaxePunkTmx $TRAVIS_BUILD_DIR > log.txt || cat log.txt
+  - haxelib install format
   - haxelib list
 
 before_script:
